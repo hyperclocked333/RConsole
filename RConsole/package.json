@@ -1,0 +1,41 @@
+{
+	"name": "rconsole",
+	"description": "Logs anything that goes on in the ROBLOX console and outputs it in VSCode.",
+	"version": "0.0.1",
+	"publisher": "vscode-samples",
+	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-minimal-sample",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "RConsole",
+			"properties": {
+				"rconsole.showOnStartup": {
+					"type": "boolean",
+					"default": false,
+					"description": "Auto-selects RConsole on startup."
+				},
+				"rconsole.clearOnDisconnect": {
+					"type": "boolean",
+					"default": false,
+					"description": "Clears out RConsole on disconnect."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "rconsole.checkConnection",
+				"title": "RC: Check Connection"
+			}
+		]
+	},
+	"scripts": {},
+	"devDependencies": {
+		"@types/vscode": "^1.73.0"
+	}
+}
